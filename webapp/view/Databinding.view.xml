@@ -1,0 +1,31 @@
+<mvc:View controllerName="com.sap.databinding.controller.Databinding"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Panel id="panel1" headerText="{i18n>mieinfo}" class="sapUI5ResponsiveMargin" width="auto">
+            <content>
+                <l:VerticalLayout id="vlayout">
+                    <Label id="nome" text="Nome"></Label>
+                    <Input id="nomeinput" value="{/name}"></Input>
+                    <Label id="indirizzocitta" text="Indirizzo - Città"></Label>
+                    <Input id="indirizzocittainput" value="{/address/city}"></Input>
+                    <Label id="indirizzocap" text="Indirizzo - CAP"></Label>
+                    <Input id="indirizzocapinput" value="{/address/ZIP}"></Input>
+                    <Label id="indirizzostato" text="Indirizzo - Stato"></Label>
+                    <Input id="indirizzostatoinput" value="{/address/country}"></Input>
+                    <Label id="hobbies" text="Hobbies" class="sapUiTinyMarginTop sapUiTinyMarginEnd"></Label>
+                    <List id="list" items="{ path: '/hobbies', factory: '.factory.hobbyFactory'}">
+                        <dependents>
+                            <core:Fragment fragmentName="com.sap.databinding.fragments.Amateur" type="XML"/>
+                            <core:Fragment fragmentName="com.sap.databinding.fragments.Professional" type="XML"/>
+                        </dependents>
+                    </List>
+                </l:VerticalLayout>
+            </content>
+        </Panel>
+        </content>
+    </Page>
+</mvc:View>

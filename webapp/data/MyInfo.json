@@ -1,0 +1,35 @@
+{
+    "name": "Andrea",
+    "address": {
+        "street": "Via Monferrato",
+        "city": "Torino",
+        "ZIP": "17025",
+        "country": "Italia"
+    },
+    "hobbies": [
+        {
+            "name": "pesca",
+            "skill": "hobby"
+        },
+        {
+            "name": "tennis",
+            "skill": "hobby"
+        },
+        {
+            "name": "tromba",
+            "skill": "professione",
+            "ranking": 12,
+            "prizeMoney": 20000,
+            "currencyCode": "EUR",
+            "status": "attivo"
+        },
+        {
+            "name": "consulente SAP",
+            "skill": "professione",
+            "ranking": 25,
+            "prizeMoney": 45000,
+            "currencyCode": "EUR",
+            "status": "pensione"
+        }
+    ]
+}

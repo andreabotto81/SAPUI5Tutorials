@@ -1,0 +1,13 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+    <ObjectListItem id="professional" icon="sap-icon://competitor" title="{name}"
+    number="{parts:[{path:'prizeMoney'},{path:'currencyCode'}], type: 'sap.ui.model.type.currency'}"
+    type="Active" numberState="Success" numberUnit="{currencyCode}">
+        <firstStatus>
+            <ObjectStatus id="objstatus" text="{status}" state="{=${status}==='attivo' ? 'Success':'Warning'}"/>
+        </firstStatus>
+    <ObjectAttribute id="ranking" text="Ranking: {ranking}"/>
+    </ObjectListItem>
+</c:FragmentDefinition>
